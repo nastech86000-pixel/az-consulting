@@ -1,0 +1,112 @@
+/* =====================================================================
+   AZ Consulting — styles partagés : barre du haut, en-tête, menu mobile,
+   ajustements responsive communs à toutes les pages.
+   ===================================================================== */
+html{-webkit-text-size-adjust:100%; scroll-behavior:smooth;}
+html.az-lock{overflow:hidden;}
+img,svg,iframe,video{max-width:100%;}
+body{overflow-x:hidden;}
+
+.az-wrap{max-width:var(--az-max,1180px); margin:0 auto; padding:0 32px;}
+
+/* ---------- Barre du haut ---------- */
+.az-topbar{background:#16241A; color:rgba(247,244,236,0.8); font-size:12.5px; line-height:1.4;}
+.az-topbar .az-wrap{display:flex; justify-content:space-between; align-items:center; gap:8px 24px; padding-top:9px; padding-bottom:9px; flex-wrap:wrap;}
+.az-topbar a{color:inherit; text-decoration:none;}
+.az-topbar a:hover{color:#8FBF3F;}
+.az-tb-left{display:flex; gap:6px 24px; flex-wrap:wrap; align-items:center;}
+.az-tb-left span, .az-tb-left a{display:inline-flex; align-items:center; gap:7px;}
+.az-tb-right{display:flex; align-items:center; gap:14px;}
+.az-tb-social{display:flex; gap:10px;}
+.az-tb-social a{width:22px; height:22px; border:1px solid rgba(247,244,236,0.3); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:10px;}
+
+/* ---------- En-tête ---------- */
+.az-header{position:sticky; top:0; z-index:100; background:#F7F4EC; border-bottom:1px solid rgba(28,43,30,0.12);}
+.az-nav{display:flex; align-items:center; justify-content:space-between; gap:20px; padding-top:14px; padding-bottom:14px;}
+.az-logo{display:flex; align-items:center; gap:10px; text-decoration:none; color:#1C2B1E; flex:none; min-width:0;}
+.az-logo img{height:38px; width:auto; display:block; flex:none;}
+.az-logo-text{line-height:1.15; min-width:0;}
+.az-logo-text b{font-family:'Fraunces', serif; font-size:16px; font-weight:600; display:block; white-space:nowrap;}
+.az-logo-text span{font-size:10px; color:#59645A; letter-spacing:0.04em; white-space:nowrap;}
+
+.az-menu{display:flex; align-items:center; gap:0;}
+.az-menu ul{list-style:none; display:flex; gap:30px; font-size:14px; font-weight:500; align-items:center; margin:0; padding:0;}
+.az-menu a{color:#59645A; text-decoration:none; position:relative; padding:6px 0; display:inline-block;}
+.az-menu a:hover{color:#1C2B1E;}
+.az-menu a.active{color:#1C2B1E;}
+.az-menu a.active::after{content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:#5B8C2A;}
+.az-has-drop{position:relative;}
+.az-dropdown{position:absolute; top:calc(100% + 14px); left:50%; transform:translateX(-50%); background:#fff; border:1px solid rgba(28,43,30,0.12); border-radius:12px; padding:10px; min-width:240px; box-shadow:0 16px 32px rgba(20,30,20,0.12); opacity:0; visibility:hidden; transition:opacity .15s ease, top .15s ease;}
+.az-has-drop:hover .az-dropdown, .az-has-drop:focus-within .az-dropdown{opacity:1; visibility:visible; top:calc(100% + 8px);}
+.az-dropdown a{display:block; padding:10px 12px; border-radius:8px; font-size:13.5px; color:#1C2B1E;}
+.az-dropdown a:hover{background:#F1EEE3;}
+.az-dropdown a span{display:block; font-size:11.5px; color:#59645A; font-weight:400; margin-top:2px;}
+.az-cta, .az-cta-mobile{background:#4A7522; color:#fff; font-size:13px; font-weight:600; padding:11px 20px; border-radius:8px; text-decoration:none; white-space:nowrap; display:inline-block;}
+.az-cta:hover, .az-menu .az-cta-mobile:hover{background:#3E6219; color:#fff;}
+.az-menu .az-cta-mobile, .az-menu-close, .az-overlay, .az-burger{display:none;}
+
+/* ---------- Écrans moyens et petits : menu hamburger ---------- */
+@media (max-width:960px){
+  .az-nav{padding-top:10px; padding-bottom:10px;}
+  .az-cta{display:none;}
+  .az-burger{display:flex; flex-direction:column; justify-content:center; align-items:center; gap:5px; width:44px; height:44px; border:1px solid rgba(28,43,30,0.18); background:#fff; border-radius:10px; cursor:pointer; padding:0; flex:none;}
+  .az-burger span{display:block; width:20px; height:2px; background:#1C2B1E; border-radius:2px; transition:transform .2s ease, opacity .2s ease;}
+  .az-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .az-burger[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .az-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+
+  .az-menu{position:fixed; top:0; right:0; bottom:0; width:min(330px,88vw); background:#fff; flex-direction:column; align-items:stretch; gap:0; padding:76px 22px 28px; overflow-y:auto; z-index:120; box-shadow:-14px 0 36px rgba(0,0,0,0.2); transform:translateX(105%); visibility:hidden; transition:transform .28s ease, visibility 0s linear .28s;}
+  .az-menu.is-open{transform:none; visibility:visible; transition:transform .28s ease, visibility 0s;}
+  .az-menu ul{flex-direction:column; align-items:stretch; gap:0; font-size:16px;}
+  .az-menu li{border-bottom:1px solid rgba(28,43,30,0.08);}
+  .az-menu a{display:block; padding:14px 4px; color:#1C2B1E;}
+  .az-menu a.active{color:#4A7522; font-weight:600;}
+  .az-menu a.active::after{display:none;}
+  .az-has-drop .az-dropdown{position:static; transform:none; opacity:1; visibility:visible; box-shadow:none; border:0; background:transparent; padding:0 0 10px 14px; min-width:0;}
+  .az-dropdown a{padding:10px 4px; font-size:14.5px; color:#59645A; border-radius:0;}
+  .az-dropdown a:hover{background:transparent; color:#1C2B1E;}
+  .az-menu .az-cta-mobile{display:block; text-align:center; margin-top:22px; padding:14px 20px; font-size:15px; color:#fff;}
+  .az-menu-close{display:flex; align-items:center; justify-content:center; position:absolute; top:16px; right:16px; width:44px; height:44px; border:1px solid rgba(28,43,30,0.18); background:#fff; border-radius:10px; font-size:26px; line-height:1; color:#1C2B1E; cursor:pointer;}
+  .az-overlay{display:block; position:fixed; inset:0; background:rgba(16,28,18,0.55); opacity:0; pointer-events:none; transition:opacity .25s ease; z-index:110;}
+  .az-overlay.is-open{opacity:1; pointer-events:auto;}
+}
+
+/* ---------- Barre du haut sur petits écrans : visible, compacte ---------- */
+@media (max-width:760px){
+  .az-tb-left .az-tb-addr, .az-tb-right{display:none;}
+  .az-topbar .az-wrap{justify-content:center;}
+  .az-tb-left{justify-content:center; gap:4px 18px;}
+}
+
+/* ---------- Ajustements responsive communs ---------- */
+@media (max-width:860px){
+  section{padding-top:60px; padding-bottom:60px;}
+  .hero-actions{flex-wrap:wrap;}
+  .cta-band-actions{flex-wrap:wrap;}
+}
+@media (max-width:600px){
+  .az-wrap, .wrap{padding-left:20px !important; padding-right:20px !important;}
+  .az-logo img{height:34px;}
+  .az-logo-text b{font-size:15px;}
+  .az-logo-text span{font-size:9px;}
+  section{padding-top:48px; padding-bottom:48px;}
+  .hero h1{font-size:30px !important; line-height:1.15;}
+  .hero .wrap{padding-top:56px !important; padding-bottom:48px !important;}
+  .hero p{font-size:15px !important;}
+  .page-hero{padding-top:44px !important; padding-bottom:36px !important;}
+  .page-hero h1{font-size:28px !important;}
+  .section-head h2{font-size:26px !important;}
+  .cta-band .wrap, .cta-band-copy{padding-top:36px; padding-bottom:36px;}
+  .cta-band h2, .cta-band-copy h2{font-size:22px !important;}
+  .cta-band .wrap > a, .cta-band-actions a, .hero-actions a{text-align:center; justify-content:center;}
+  .hero-actions{flex-direction:column; align-items:stretch;}
+  .cta-band-actions{flex-direction:column; align-items:stretch; width:100%;}
+  .features .wrap{grid-template-columns:1fr !important;}
+  .footer-grid, .footer-grid2{grid-template-columns:1fr !important; gap:26px !important;}
+  .footer-bottom{flex-direction:column; gap:8px;}
+  .wa-float{right:16px !important; bottom:16px !important; width:48px !important; height:48px !important;}
+  input, select, textarea{font-size:16px !important;}
+}
+@media (max-width:360px){
+  .az-logo-text span{display:none;}
+}
