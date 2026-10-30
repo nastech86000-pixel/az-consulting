@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Plan du site — AZ Consulting</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2B1E; --cream:#F7F4EC; --white:#FFFFFF;
+    --green:#5B8C2A; --green-light:#8FBF3F; --slate:#59645A; --line: rgba(28,43,30,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Public Sans', sans-serif; background:var(--cream); color:var(--ink);}
+  h1,h2{font-family:'Fraunces', serif; font-weight:500; color:var(--ink);}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:760px; margin:0 auto; padding:56px 32px 80px;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--green); margin-bottom:14px;}
+  h1{font-size:32px; margin-bottom:40px;}
+  ul{list-style:none;}
+  li{border-top:1px solid var(--line); padding:18px 0;}
+  li:last-child{border-bottom:1px solid var(--line);}
+  li a{display:flex; justify-content:space-between; align-items:center; font-size:16px; font-weight:500;}
+  li a:hover{color:var(--green);}
+  li span{font-size:13px; color:var(--slate); font-weight:400;}
+  .back{display:inline-block; margin-top:40px; font-size:13px; color:var(--green); font-weight:600;}
+</style>
+<style>:root{--az-max:1180px}</style>
+<meta name="theme-color" content="#16241A">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<div class="az-topbar">
+  <div class="az-wrap">
+    <div class="az-tb-left">
+      <a href="mailto:contact@azconsulting.co">✉ contact@azconsulting.co</a>
+      <a href="tel:+2693297402">☎ +269 329 74 02</a>
+      <span class="az-tb-addr">📍 Avenue Ali Soilih Hamramba, Moroni</span>
+    </div>
+    <div class="az-tb-right">
+      <span>Suivez-nous</span>
+      <div class="az-tb-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="az-header" id="azHeader">
+  <div class="az-nav az-wrap">
+    <a class="az-logo" href="index.html" aria-label="AZ Consulting, accueil">
+      <img src="assets/logo-header.png" alt="AZ Consulting">
+      <span class="az-logo-text"><b>AZ Consulting</b><span>LE CONSEIL DE A À Z</span></span>
+    </a>
+    <div class="az-menu" id="azMenu" role="navigation" aria-label="Navigation principale">
+      <button type="button" class="az-menu-close" aria-label="Fermer le menu">×</button>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cabinet.html">Notre cabinet</a></li>
+        <li class="az-has-drop">
+          <a href="services.html">Nos services ▾</a>
+          <div class="az-dropdown">
+            <a href="services.html#outsourcing">Outsourcing<span>Comptabilité &amp; RH</span></a>
+            <a href="services.html#juridique">Assistance juridique<span>Conformité &amp; contrats</span></a>
+            <a href="services.html#etudes">Études<span>Financement &amp; agréments</span></a>
+          </div>
+        </li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="az-cta-mobile" href="contact.html">Prendre rendez-vous</a>
+    </div>
+    <a class="az-cta" href="contact.html">Prendre rendez-vous</a>
+    <button type="button" class="az-burger" id="azBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="azMenu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="az-overlay" id="azOverlay"></div>
+</div>
+
+<div class="wrap">
+    <div class="eyebrow">AZ Consulting</div>
+    <h1>Plan du site</h1>
+    <ul>
+      <li><a href="index.html">Accueil <span>Présentation du cabinet</span></a></li>
+      <li><a href="cabinet.html">Notre cabinet <span>Équipe, expertise, ambition</span></a></li>
+      <li><a href="services.html">Nos services <span>Outsourcing, juridique, études</span></a></li>
+      <li><a href="contact.html">Contact <span>Formulaire, adresse, carte</span></a></li>
+      <li><a href="actualites.html">Actualités <span>Conseils et actualités</span></a></li>
+      <li><a href="faq.html">FAQ <span>Questions fréquentes</span></a></li>
+      <li><a href="partenaires.html">Nos partenaires <span>Réseau de partenaires</span></a></li>
+      <li><a href="carrieres.html">Carrières <span>Rejoindre l'équipe</span></a></li>
+    </ul>
+    <a href="index.html" class="back">← Retour à l'accueil</a>
+  </div>
+<script src="assets/site.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Nos services — AZ Consulting</title>
+<meta name="description" content="Outsourcing comptable et RH, assistance juridique, montage de dossiers de financement : découvrez les services d'AZ Consulting.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1C2B1E; --ink-soft:#2A3B2C; --cream:#F7F4EC; --white:#FFFFFF;
+    --green:#5B8C2A; --green-light:#8FBF3F; --green-dark:#4A7522; --slate:#59645A;
+    --line: rgba(28,43,30,0.12);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:'Public Sans', sans-serif; background:var(--cream); color:var(--ink); -webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Fraunces', serif; font-weight:500; letter-spacing:-0.01em; color:var(--ink);}
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  .eyebrow{font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--green);}
+
+  header{position:sticky; top:0; z-index:20; background:rgba(247,244,236,0.92); backdrop-filter:blur(6px); border-bottom:1px solid var(--line);}
+  .nav{display:flex; align-items:center; justify-content:space-between; padding:18px 32px;}
+  .logo{display:flex; align-items:center; gap:10px;}
+  .logo-mark{height:34px; width:auto; display:block; flex:none;}
+  .logo-text{line-height:1.15;}
+  .logo-text b{font-family:'Fraunces', serif; font-size:16px; display:block;}
+  .logo-text span{font-size:10px; color:var(--slate); letter-spacing:0.04em;}
+  nav ul{list-style:none; display:flex; gap:36px; font-size:14px; font-weight:500;}
+  nav ul a{color:var(--slate); position:relative; padding:4px 0;}
+  nav ul a.active{color:var(--ink);}
+  nav ul a.active::after{content:""; position:absolute; left:0; right:0; bottom:-2px; height:2px; background:var(--green);}
+  .nav-cta{background:var(--ink); color:var(--cream); font-size:13px; font-weight:500; padding:10px 18px; border-radius:100px;}
+
+  .page-hero{background:var(--ink); color:var(--white); padding:64px 0 48px;}
+  .page-hero .eyebrow{color:var(--green-light); margin-bottom:14px;}
+  .page-hero h1{font-size:38px; color:var(--white); max-width:620px;}
+  .page-hero p{color:rgba(247,244,236,0.7); font-size:15px; max-width:520px; margin-top:14px;}
+
+  section{padding:76px 0;}
+  .services-layout{display:grid; grid-template-columns:1fr 300px; gap:56px; align-items:start;}
+  .service-block{border-top:1px solid var(--line); padding:40px 0; display:grid; grid-template-columns:64px 1fr; gap:24px; scroll-margin-top:100px;}
+  .service-block:first-child{border-top:none; padding-top:0;}
+  .service-block .letter{
+    font-family:'Fraunces', serif; font-size:46px; color:transparent;
+    -webkit-text-stroke:1.6px var(--green);
+  }
+  .service-block h2{font-size:22px; margin-bottom:12px;}
+  .service-block p{font-size:15px; color:var(--slate); line-height:1.75; max-width:560px;}
+  .service-block ul{margin-top:14px; padding-left:0; list-style:none;}
+  .service-block li{font-size:14px; color:var(--slate); padding:8px 0 8px 22px; position:relative; border-top:1px solid var(--line);}
+  .service-block li:first-child{border-top:none;}
+  .service-block li::before{content:"→"; position:absolute; left:0; color:var(--green-dark);}
+
+  .side-card{background:var(--white); border:1px solid var(--line); border-radius:14px; padding:26px 24px; margin-bottom:20px; position:sticky; top:100px;}
+  .side-card h4{font-family:'Fraunces', serif; font-size:16px; margin-bottom:14px; border-bottom:1px solid var(--line); padding-bottom:12px;}
+  .side-card p{font-size:13.5px; color:var(--slate); line-height:1.8; margin-bottom:14px;}
+  .btn-primary{background:var(--ink); color:var(--cream); font-weight:600; font-size:14px; padding:13px 22px; border-radius:8px; display:inline-block; width:100%; text-align:center;}
+
+  .cta-band{background:var(--green); color:var(--white); padding:56px 0;}
+  .cta-band .wrap{display:flex; align-items:center; justify-content:space-between;}
+  .cta-band h2{color:var(--white); font-size:26px; max-width:420px;}
+  .cta-band .btn-primary{width:auto;}
+
+  footer{background:var(--ink); color:rgba(247,244,236,0.65); padding:56px 0 26px;}
+  .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:36px; border-bottom:1px solid rgba(247,244,236,0.12);}
+  .footer-grid h4{font-family:'Fraunces', serif; color:var(--white); font-size:16px; margin-bottom:14px; font-weight:500;}
+  .footer-grid p, .footer-grid li{font-size:13.5px; line-height:1.9;}
+  .footer-grid ul{list-style:none;}
+  .footer-bottom{display:flex; justify-content:space-between; padding-top:22px; font-size:12px;}
+
+  @media (max-width:860px){
+    nav ul{display:none;}
+    .services-layout{grid-template-columns:1fr;}
+    .service-block{grid-template-columns:1fr;}
+    .side-card{position:static;}
+    .cta-band .wrap{flex-direction:column; gap:20px; align-items:flex-start;}
+    .footer-grid{grid-template-columns:1fr; gap:28px;}
+  }
+  .wa-float{
+    position:fixed; right:24px; bottom:24px; z-index:30;
+    background:#25D366; color:var(--white); width:52px; height:52px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 18px rgba(0,0,0,0.22);
+  }
+  .wa-float svg{width:26px; height:26px;}
+</style>
+<style>:root{--az-max:1120px}</style>
+<meta name="theme-color" content="#16241A">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<div class="az-topbar">
+  <div class="az-wrap">
+    <div class="az-tb-left">
+      <a href="mailto:contact@azconsulting.co">✉ contact@azconsulting.co</a>
+      <a href="tel:+2693297402">☎ +269 329 74 02</a>
+      <span class="az-tb-addr">📍 Avenue Ali Soilih Hamramba, Moroni</span>
+    </div>
+    <div class="az-tb-right">
+      <span>Suivez-nous</span>
+      <div class="az-tb-social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">X</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="az-header" id="azHeader">
+  <div class="az-nav az-wrap">
+    <a class="az-logo" href="index.html" aria-label="AZ Consulting, accueil">
+      <img src="assets/logo-header.png" alt="AZ Consulting">
+      <span class="az-logo-text"><b>AZ Consulting</b><span>LE CONSEIL DE A À Z</span></span>
+    </a>
+    <div class="az-menu" id="azMenu" role="navigation" aria-label="Navigation principale">
+      <button type="button" class="az-menu-close" aria-label="Fermer le menu">×</button>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="cabinet.html">Notre cabinet</a></li>
+        <li class="az-has-drop">
+          <a href="services.html" class="active">Nos services ▾</a>
+          <div class="az-dropdown">
+            <a href="services.html#outsourcing">Outsourcing<span>Comptabilité &amp; RH</span></a>
+            <a href="services.html#juridique">Assistance juridique<span>Conformité &amp; contrats</span></a>
+            <a href="services.html#etudes">Études<span>Financement &amp; agréments</span></a>
+          </div>
+        </li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a class="az-cta-mobile" href="contact.html">Prendre rendez-vous</a>
+    </div>
+    <a class="az-cta" href="contact.html">Prendre rendez-vous</a>
+    <button type="button" class="az-burger" id="azBurger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="azMenu"><span></span><span></span><span></span></button>
+  </div>
+  <div class="az-overlay" id="azOverlay"></div>
+</div>
+
+
+<section class="page-hero" style="padding-bottom:48px;">
+  <div class="wrap">
+    <div class="eyebrow">Nos services</div>
+    <h1>Trois pôles d'expertise, une seule équipe</h1>
+    <p>Outsourcing, assistance juridique et études : de quoi couvrir tous les besoins d'un chef d'entreprise, de A à Z.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap services-layout">
+    <div>
+      <div class="service-block" id="outsourcing">
+        <span class="letter">O</span>
+        <div>
+          <h2>Outsourcing</h2>
+          <p>Nos spécialistes vous proposent de prendre en charge l'intégralité de vos services comptables et/ou RH, pour vous libérer du temps et de l'énergie et vous permettre de vous concentrer sur votre activité.</p>
+          <ul>
+            <li>Gestion comptable externalisée</li>
+            <li>Gestion administrative du personnel</li>
+            <li>Suivi de la paie</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-block" id="juridique">
+        <span class="letter">A</span>
+        <div>
+          <h2>Assistance et représentation juridique</h2>
+          <p>Bénéficiez de conseils juridiques et d'un accompagnement en conformité assurés par une équipe de professionnels qualifiés.</p>
+          <ul>
+            <li>Création, modification et radiation d'entreprises</li>
+            <li>Rédaction et négociation de contrats commerciaux</li>
+            <li>Représentation devant les tribunaux en cas de litige commercial</li>
+          </ul>
+        </div>
+      </div>
+      <div class="service-block" id="etudes">
+        <span class="letter">É</span>
+        <div>
+          <h2>Études</h2>
+          <p>Nos experts réalisent pour vous les études nécessaires à vos demandes de financement, de prêts et d'agréments.</p>
+          <ul>
+            <li>Montage de dossiers de financement et de prêts</li>
+            <li>Dossiers conformes aux standards des banques locales</li>
+            <li>Dossiers d'agrément auprès de l'administration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <aside>
+      <div class="side-card">
+        <h4>Un besoin précis ?</h4>
+        <p>Décrivez-nous votre projet, nous revenons vers vous rapidement pour vous orienter vers le bon pôle d'expertise.</p>
+        <a href="contact.html" class="btn-primary">Nous contacter</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Un projet, une question ? Parlons-en.</h2>
+    <a href="contact.html" class="btn-primary">Contacter AZ Consulting</a>
+  </div>
+</section>
+
+<a href="https://wa.me/2693297402" class="wa-float" aria-label="Contacter sur WhatsApp" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.4L3 21l3.7-1.29a8.9 8.9 0 0 0 4.35 1.13h0a8.94 8.94 0 0 0 6.32-15.24Zm-5.55 13.7h0a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.24.78.75-2.2-.18-.28a7.42 7.42 0 0 1 11.5-9.22 7.4 7.4 0 0 1-5.78 12.12Zm4.06-5.56c-.22-.11-1.3-.64-1.5-.72s-.35-.11-.5.11-.57.72-.7.87-.26.17-.48.06a6.1 6.1 0 0 1-1.8-1.11 6.7 6.7 0 0 1-1.24-1.55c-.13-.22 0-.34.1-.45.1-.1.22-.26.33-.39a1.5 1.5 0 0 0 .22-.37.4.4 0 0 0 0-.39c-.06-.11-.5-1.2-.68-1.65s-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86 4.36 4.36 0 0 0 .92 2.3 9.9 9.9 0 0 0 3.8 3.36c.53.23.95.37 1.27.47a3.05 3.05 0 0 0 1.4.09 2.3 2.3 0 0 0 1.5-1.06 1.9 1.9 0 0 0 .13-1.06c-.06-.1-.2-.15-.42-.27Z"/></svg>
+</a>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>AZ Consulting</h4>
+        <p>Avenue Ali Soilih Hamramba<br>BP 14 87 Moroni, Union des Comores</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li>+269 329 74 02</li><li>contact@azconsulting.co</li></ul>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <ul><li><a href="cabinet.html">Notre cabinet</a></li><li><a href="services.html">Nos services</a></li><li><a href="actualites.html">Actualités</a></li><li><a href="faq.html">FAQ</a></li><li><a href="partenaires.html">Partenaires</a></li><li><a href="carrieres.html">Carrières</a></li><li><a href="contact.html">Contact</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>AZ Consulting — SARL au capital de 750 000 KMF — RCCM 6061-B-14 — Tous droits réservés</span>
+      <span><a href="plan-du-site.html">Plan du site</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
