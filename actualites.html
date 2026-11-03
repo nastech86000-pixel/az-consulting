@@ -78,6 +78,28 @@
 <style>:root{--az-max:1120px}</style>
 <meta name="theme-color" content="#16241A">
 <link rel="stylesheet" href="assets/site.css">
+<style>
+.az-posts{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.az-post-card{display:flex;flex-direction:column;border:1px solid rgba(28,43,30,.12);border-radius:14px;overflow:hidden;background:#fff;transition:transform .15s,box-shadow .15s;}
+.az-post-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(28,43,30,.10);}
+.az-post-card img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;}
+.az-post-body{padding:22px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.az-post-body .tag{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#B98A33;margin-bottom:8px;}
+.az-post-body h3{font-size:17px;line-height:1.3;margin-bottom:8px;}
+.az-post-body p{font-size:13.5px;color:#59645A;line-height:1.6;margin-bottom:14px;}
+.az-post-meta{margin-top:auto;font-size:12px;color:#59645A;}
+.az-article{max-width:740px;margin:0 auto;padding:0 32px;}
+.az-article h2{font-size:23px;margin:34px 0 10px;}
+.az-article p{font-size:16px;line-height:1.75;color:#2A3B2C;}
+.az-article .az-cover{display:block;width:100%;border-radius:14px;margin:-8px 0 8px;aspect-ratio:16/8;object-fit:cover;}
+.az-note{margin-top:34px;padding:16px 18px;border-left:3px solid #5B8C2A;background:#fff;border-radius:0 10px 10px 0;font-size:14px;color:#59645A;line-height:1.6;}
+.az-back{display:inline-block;margin:0 0 26px;font-size:13.5px;font-weight:600;color:#4A7522;}
+@media(max-width:900px){.az-posts{grid-template-columns:1fr 1fr;}}
+@media(max-width:620px){.az-posts{grid-template-columns:1fr;}.az-article{padding:0 20px;}.az-article h2{font-size:21px;}}
+</style>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 </head>
 <body>
 
@@ -137,12 +159,7 @@
 
 <section>
   <div class="wrap">
-    <div class="empty-state">
-      <h2>Aucun article publié pour le moment</h2>
-      <p>Cette rubrique accueillera prochainement des articles pratiques sur la création d'entreprise, la fiscalité, le financement et la conformité aux Comores. Revenez bientôt, ou suivez-nous sur nos réseaux pour être informé en premier.</p>
-    </div>
-
-    <!-- Structure prête pour les futurs articles -->
+    <div class="az-posts"><a class="az-post-card" href="creer-son-entreprise-a-moroni.html"><img src="assets/actus/creer-son-entreprise-a-moroni.svg" alt="" loading="lazy"><div class="az-post-body"><span class="tag">Juridique</span><h3>Créer son entreprise à Moroni : les grandes étapes</h3><p>Avant de se lancer, mieux vaut connaître le parcours dans l'ordre. Voici les grandes étapes à avoir en tête, du projet à l'immatriculation.</p><span class="az-post-meta">3 novembre 2026 · 4 min de lecture</span></div></a><a class="az-post-card" href="dossier-de-financement-bancaire.html"><img src="assets/actus/dossier-de-financement-bancaire.svg" alt="" loading="lazy"><div class="az-post-body"><span class="tag">Financement</span><h3>Monter un dossier de financement bancaire solide</h3><p>Une banque ne finance pas une idée, elle finance un projet qu'elle comprend et dont elle mesure les risques. Voici comment présenter le vôtre.</p><span class="az-post-meta">3 novembre 2026 · 4 min de lecture</span></div></a><a class="az-post-card" href="outsourcing-comptable-pour-qui.html"><img src="assets/actus/outsourcing-comptable-pour-qui.svg" alt="" loading="lazy"><div class="az-post-body"><span class="tag">Gestion</span><h3>Outsourcing comptable : pour qui et à partir de quand ?</h3><p>Confier sa comptabilité à un prestataire n'est pas réservé aux grandes entreprises. Voici comment savoir si c'est le bon moment pour vous.</p><span class="az-post-meta">3 novembre 2026 · 3 min de lecture</span></div></a></div>
     <!--
     <div class="article-grid" style="margin-top:40px;">
       <div class="article-card">
@@ -156,7 +173,7 @@
 
 <section class="cta-band">
   <div class="wrap">
-    <h2>Une question en attendant les articles ?</h2>
+    <h2>Une question sur votre projet ?</h2>
     <a href="contact.html" class="btn-primary">Contacter AZ Consulting</a>
   </div>
 </section>

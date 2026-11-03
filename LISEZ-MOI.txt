@@ -1,13 +1,3 @@
-SITE AZ CONSULTING — dossier prêt à publier
-
-Contenu : 9 pages (index.html = accueil) + dossier assets/ (logo, styles, menu mobile).
-IMPORTANT : garder tous les fichiers ensemble, dans le même dossier, avec le dossier assets/.
-
-Test sur GitHub Pages : supprimer l'ancien index.html du dépôt, puis déposer TOUT le contenu de ce dossier
-(les 9 fichiers .html et le dossier assets) à la racine du dépôt.
-
-Mise en ligne (espace web IONOS ou autre hébergeur) : déposer le contenu de ce dossier (pas le dossier lui-même)
-à la racine de l'espace web, via SFTP. Le fichier d'entrée est index.html.
-
-Avant mise en ligne publique : retirer ou remplacer les textes provisoires
-(photo « à ajouter », témoignages et études de cas à venir, liens des réseaux sociaux « # »).
+AZ Consulting - site statique
+Deposer TOUT le contenu a la racine du depot GitHub (pages .html, favicon.ico, dossier assets/ avec actus/ et equipe.jpg).
+Noms de fichiers en minuscules, sans accent.
